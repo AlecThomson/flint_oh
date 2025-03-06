@@ -14,7 +14,7 @@ defaults:
     nmiter: 14
     niter: 200000
     multiscale: true
-    multiscale_scale_bias: 0.7
+    multiscale_scale_bias: 0.8
     multiscale_scales: !!python/tuple
     - 0
     - 4

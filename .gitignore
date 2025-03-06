@@ -8,3 +8,4 @@ flint_logs
 70731_bak/*
 logs/*
 prefect/*
+*.last

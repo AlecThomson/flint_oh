@@ -148,7 +148,7 @@ selfcal:
       auto_mask: null
       auto_threshold: 0.5
       local_rms: False
-      locaL_rms_window: null
+      local_rms_window: null
     gaincal:
       solint: 480s
       calmode: ap

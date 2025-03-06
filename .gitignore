@@ -1,0 +1,10 @@
+70731/*
+70731_flint/*
+flint_logs
+*.fits
+*.tar
+*.ms
+70731_all_interleaves/*
+70731_bak/*
+logs/*
+prefect/*

@@ -4,17 +4,17 @@ defaults:
     temp_dir: $MEMDIR
     abs_mem: 100
     local_rms_window: 30
-    size: 6128
+    size: 8192
     local_rms: true
     auto_mask: 10
     auto_threshold: 0.75
     threshold: null
     channels_out: 3
-    mgain: 0.7
+    mgain: 0.8
     nmiter: 14
     niter: 200000
     multiscale: true
-    multiscale_scale_bias: 0.6
+    multiscale_scale_bias: 0.7
     multiscale_scales: !!python/tuple
     - 0
     - 4
@@ -28,9 +28,9 @@ defaults:
     - 128
     - 196
     fit_spectral_pol: 2
-    weight: briggs 0.5
+    weight: briggs -0.5
     data_column: CORRECTED_DATA
-    scale: 2.5asec
+    scale: 2.0asec
     gridder: wgridder
     nwlayers: null
     wgridder_accuracy: 0.0001
@@ -42,8 +42,7 @@ defaults:
     no_small_inversion: false
     beam_fitting_size: 1.25
     fits_mask: null
-    deconvolution_channels: 6
-    parallel_gridding: 36
+    parallel_gridding: 3
     pol: i
   gaincal:
     solint: 60s
@@ -65,6 +64,8 @@ defaults:
     grow_low_snr_island: false
     grow_low_snr_island_clip: 1.75
     grow_low_snr_island_size: 12046
+    beam_shape_erode: true
+    beam_shape_erode_minimum_response: 0.8
   archive:
     tar_file_re_patterns: !!python/tuple
     - .*round4.*MFS.*(image|residual|model,cube)\.fits
@@ -144,9 +145,10 @@ selfcal:
       flood_fill_use_mbc_box_size: 60
   4:
     wsclean:
-      auto_mask: 2.0
+      auto_mask: null
       auto_threshold: 0.5
       local_rms: False
+      locaL_rms_window: null
     gaincal:
       solint: 480s
       calmode: ap
@@ -157,8 +159,3 @@ selfcal:
       flood_fill_positive_seed_clip: 1.2
       flood_fill_positive_flood_clip: 0.7
       flood_fill_use_mbc_box_size: 60
-stokesv:
-  wsclean:
-    pol: v
-    no_update_model_required: true
-    nmiter: 6

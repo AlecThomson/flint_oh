@@ -2,7 +2,7 @@
 #SBATCH --job-name=flint
 #SBATCH -A OD-217087 
 #SBATCH -n 1
-#SBATCH --cpus-per-task=36
+#SBATCH --cpus-per-task=1
 #SBATCH --time=1-00:00:00
 #SBATCH --mem=8GB
 #SBATCH -o logs/flint_%j.log

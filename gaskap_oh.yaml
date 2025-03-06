@@ -149,6 +149,7 @@ selfcal:
       auto_threshold: 0.5
       local_rms: False
       local_rms_window: null
+      save_source_list: true
     gaincal:
       solint: 480s
       calmode: ap

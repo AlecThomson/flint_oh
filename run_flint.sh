@@ -26,24 +26,5 @@ conda activate flint
 
 
 flint_flow_continuum_pipeline \
-    --split-path 70731_flint \
-    --cluster-config petrichor.yaml \
-    --flagger-container containers/flint-containers_aoflagger.sif \
-    --calibrate-container containers/flint-containers_calibrate.sif \
-    --casa-container containers/flint-containers_casa.sif \
-    --expected-ms 36 \
-    --wsclean-container containers/flint-containers_wsclean.sif \
-    --yandasoft-container containers/flint-containers_askapsoft.sif \
-    --potato-container containers/flint-container_potato.sif \
-    --holofile akpb.iquv.closepack36.48.1655MHz.SB70497.cube.fits \
-    --run-aegean \
-    --aegean-container containers/flint-containers_aegean.sif \
-    --reference-catalogue-directory catalogues \
-    --linmos-residuals \
-    --pb-cutoff 0.1 \
-    --imaging-strategy gaskap_oh.yaml \
-    --coadd-cubes \
-    --use-beam-masks \
-    --use-beam-masks-from 1 \
-    --rounds 4 \
+    --cli-config cli_config.yaml \
     70731

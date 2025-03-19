@@ -10,11 +10,11 @@ defaults:
     auto_threshold: 0.75
     threshold: null
     channels_out: 3
-    mgain: 0.8
-    nmiter: 14
-    niter: 200000
+    mgain: 0.51
+    nmiter: 0
+    niter: 10000000
     multiscale: true
-    multiscale_scale_bias: 0.8
+    multiscale_scale_bias: 0.85
     multiscale_scales: !!python/tuple
     - 0
     - 4

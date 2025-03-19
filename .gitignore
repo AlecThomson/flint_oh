@@ -9,3 +9,4 @@ flint_logs
 logs/*
 prefect/*
 *.last
+casa-*.log

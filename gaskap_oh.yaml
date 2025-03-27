@@ -35,7 +35,7 @@ defaults:
     nwlayers: null
     wgridder_accuracy: 0.0001
     join_channels: true
-    minuv_l: 200
+    minuv_l: null
     minuvw_m: null
     maxw: null
     no_update_model_required: false
